@@ -49,7 +49,7 @@ inputFile.addEventListener("change", async () => {
       const result = detectAngle();
 
       if (result) {
-        taResult.textContent = result.angle;
+        taResult.value = result.angle;
         drawRect(result.vertices);
 
       } else console.log("Detection Failure.")
@@ -96,7 +96,7 @@ inputFile.addEventListener("change", async () => {
 
       if (result) {
         const gameFrame = Math.round(video.currentTime * 60);
-        taResult.textContent += `${frame}, ${video.currentTime}, ${gameFrame}, ${result.angle}\n`;
+        taResult.value += `${frame}, ${video.currentTime}, ${gameFrame}, ${result.angle}\n`;
 
         drawRect(result.vertices);
 
@@ -254,13 +254,13 @@ function drawRect(vertices) {
 }
 
 function clearResult() {
-  taResult.textContent = "";
+  taResult.value = "";
 }
 
 getElm("#buttonClear").addEventListener("click", clearResult);
 
 getElm("#buttonCopy").addEventListener("click", () => {
-  navigator.clipboard.writeText(taResult.textContent);
+  navigator.clipboard.writeText(taResult.value);
 });
 
 window.addEventListener("beforeunload", () => {
