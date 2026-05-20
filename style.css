@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body {
+  margin-left: 15px;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+span.date {
+  color: #888;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  scale: 150%;
+  vertical-align: middle;
+}
+
+canvas {
+  border: 2px solid #888;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 480px;
+}
+
+video {
+  display: none;
+}
+
+button {
+  margin-left: 10px;
+}
+
+#taResult {
+  margin-top: 5px;
+  margin-bottom: 400px;
+}

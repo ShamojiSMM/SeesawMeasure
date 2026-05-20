@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Seesaw Measure</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://docs.opencv.org/4.x/opencv.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <video id="video" muted></video>
+
+  <h1>シーソー角測定</h1>
+
+  <span class="date">Last Update: 2026/May/20</span>
+  <hr>
+
+  <label>
+    Import Image or Video:
+    <br>
+    <input type="file" id="inputFile" accept="image/*,video/*">
+  </label>
+
+  <canvas id="canvas"></canvas>
+  <br>
+
+  <span>コマ数, 時刻[s], マリメ時刻[f], 角度[rad]</span>
+  <button id="buttonClear">クリア</button>
+  <button id="buttonCopy">コピー</button>
+  <br>
+
+  <textarea id="taResult" rows="60" cols="40"></textarea>
+
+
+</body>
+</html>
