@@ -76,7 +76,7 @@ inputFile.addEventListener("change", async () => {
     let frame = 0;
 
     while (true) {
-      const targetTime = frame * fd;
+      const targetTime = fd * (frame + 0.5);
 
       if (targetTime >= video.duration) break;
 
